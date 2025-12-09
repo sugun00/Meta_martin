@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Math Lens",
+    "slug": "math-lens",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mathlens.app",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Math Lens needs access to your photo library to analyze photos taken with your smart glasses.",
+        "NSCameraUsageDescription": "Math Lens needs access to your camera to take photos for AI analysis.",
+        "NSMicrophoneUsageDescription": "Math Lens may need microphone access for video recording."
+      }
+    },
+    "android": {
+      "package": "com.mathlens.app",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES",
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Math Lens needs access to your photo library to analyze photos taken with your smart glasses.",
+          "savePhotosPermission": "Allow Math Lens to save analyzed photos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Math Lens needs access to your photos to select images for analysis.",
+          "cameraPermission": "Math Lens needs access to your camera to take photos for AI analysis."
+        }
+      ]
+    ]
+  }
+}
